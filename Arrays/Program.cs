@@ -122,6 +122,23 @@
         // }
 
 
+        /* Task H */
+        System.Console.WriteLine("Enter numbers in a row with space between them: ");
+        string input = Console.ReadLine();
+        int[] numbers = Array.ConvertAll(input.Split(), int.Parse);
+        
+        for (int i = 0; i < numbers.Length-1; i+=2)
+        {
+            int temp = numbers[i];
+            numbers[i] = numbers[i+1];
+            numbers[i+1] = temp;
+        }
+        foreach (var item in numbers)
+        {
+            System.Console.Write(item + " ");
+        }
+
+
 
     }
 }
